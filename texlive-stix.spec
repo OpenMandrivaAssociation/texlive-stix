@@ -105,6 +105,7 @@ distributions.
 %doc %{_texmfdistdir}/doc/fonts/stix/README
 %doc %{_texmfdistdir}/doc/fonts/stix/README.TEXLIVE
 %doc %{_texmfdistdir}/doc/fonts/stix/STIX_Font_License_2010.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -115,3 +116,5 @@ distributions.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
