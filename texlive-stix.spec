@@ -1,13 +1,13 @@
 Name:		texlive-stix
-Version:	1.1.3
-Release:	3
+Version:	54512
+Release:	1
 Summary:	OpenType Unicode maths fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/stix
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -22,30 +22,30 @@ distributions. A Type 1 only distribution of the fonts is
 available in the esstix bundle.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/fonts/enc/dvips/stix
 %{_texmfdistdir}/fonts/map/dvips/stix
 %{_texmfdistdir}/fonts/opentype/public/stix
-%{_texmfdistdir}/fonts/source/public/stix
 %{_texmfdistdir}/fonts/tfm/public/stix
 %{_texmfdistdir}/fonts/type1/public/stix
 %{_texmfdistdir}/fonts/vf/public/stix
 %{_texmfdistdir}/tex/latex/stix
 %doc %{_texmfdistdir}/doc/fonts/stix
 #- source
-%doc %{_texmfdistdir}/source/latex/stix
+%doc %{_texmfdistdir}/source/fonts/stix
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
