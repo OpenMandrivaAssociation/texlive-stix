@@ -1,6 +1,6 @@
 Name:		texlive-stix
 Version:	54512
-Release:	1
+Release:	2
 Summary:	OpenType Unicode maths fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/stix
