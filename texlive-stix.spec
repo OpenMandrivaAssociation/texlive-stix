@@ -3,7 +3,7 @@ Version:	54512
 Release:	2
 Summary:	OpenType Unicode maths fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/stix
+URL:		https://www.ctan.org/tex-archive/fonts/stix
 License:	OFL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stix.doc.r%{version}.tar.xz
